@@ -1,9 +1,9 @@
 var express = require('express');
-var router = express.Router();
+
 const app = express();
-const port = 3001;
+const port = 3000;
 
-
+/*
 const workingHoursMiddleware = (req, res, next) => {
     const date = new Date();
     const day = date.getDay();
@@ -16,14 +16,16 @@ const workingHoursMiddleware = (req, res, next) => {
     }
     };
 
+*/
+//Middleware to serve static files
 
-// Middleware to serve static files
 app.use(express.static('public'));
 
-// Apply the working hours middleware to all routes
+/*
+//Apply the working hours middleware to all routes
 app.use(workingHoursMiddleware);
 
-
+*/
 
 
 
@@ -40,8 +42,9 @@ app.get('/services', (req, res) => {
 /* GET contact page. */
 
 app.get('/contact', (req, res) => {
-  res.sendFile(__dirname + '/views/contact.html')});
-module.exports = router;
+res.sendFile(__dirname + '/views/contact.html')});
+
+//module.exports = router;
 
 
 // Start the server
