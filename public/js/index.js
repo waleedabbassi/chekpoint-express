@@ -3,7 +3,7 @@ var express = require('express');
 const app = express();
 const port = 3000;
 
-/*
+
 const workingHoursMiddleware = (req, res, next) => {
     const date = new Date();
     const day = date.getDay();
@@ -16,16 +16,16 @@ const workingHoursMiddleware = (req, res, next) => {
     }
     };
 
-*/
+
 //Middleware to serve static files
 
 app.use(express.static('public'));
 
-/*
+
 //Apply the working hours middleware to all routes
 app.use(workingHoursMiddleware);
 
-*/
+
 
 
 
